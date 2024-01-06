@@ -25,7 +25,7 @@ export default function LogoList({ data }: LogoListProps) {
 						<button
 							onClick={() => addLogoToCanvas(image)}
 							className={
-								'relative hover:before:opacity-100 before:absolute before:content-[""] before:inset-0 before:border before:border-orange-400 before:opacity-0 before:transition before:duration-300 ease-in-out'
+								'relative hover:before:opacity-100 before:absolute before:content-[""] before:inset-0 before:border-[2px] before:border-orange-400 before:opacity-0 before:transition before:duration-300 ease-in-out'
 							}
 						>
 							<Image

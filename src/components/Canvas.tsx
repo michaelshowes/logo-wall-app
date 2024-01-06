@@ -19,7 +19,6 @@ import {
 } from '@dnd-kit/sortable';
 
 import { LogoProps } from '@/lib/figma';
-import { cn } from '@/lib/utils';
 
 function SortableLogo({ image }: { image: LogoProps }) {
 	const { attributes, listeners, setNodeRef, transform, transition } =
@@ -68,7 +67,7 @@ function SortableLogo({ image }: { image: LogoProps }) {
 }
 
 export default function Canvas() {
-	const { canvasImages, setCanvasImages, ref, isSaving } = useCanvasContext();
+	const { canvasImages, setCanvasImages, ref } = useCanvasContext();
 
 	const sensors = useSensors(
 		useSensor(PointerSensor, {
@@ -95,7 +94,7 @@ export default function Canvas() {
 		return (
 			<section
 				className={
-					'flex justify-center items-center bg-gray-500 text-white p-16 w-10/12 h-full mx-auto border-[3px] border-dashed border-orange-400'
+					'flex justify-center items-center bg-gray-700 text-white p-16 w-10/12 h-full mx-auto border-[3px] border-dashed border-orange-400'
 				}
 			>
 				<p>Begin by selecting the desired logos below</p>
@@ -105,9 +104,7 @@ export default function Canvas() {
 
 	return (
 		<section
-			className={cn('grid grid-cols-4 w-full', {
-				'bg-[#827e7e]': isSaving
-			})}
+			className={'grid grid-cols-4 w-full'}
 			ref={ref}
 			id={'canvas'}
 		>

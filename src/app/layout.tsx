@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 
 import CanvasContextProvider from '@/context/canvasContext';
 import '@/globals.scss';
+import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<CanvasContextProvider>{children}</CanvasContextProvider>
+				<CanvasContextProvider>
+					{children}
+					<Toaster position={'top-center'} />
+				</CanvasContextProvider>
 			</body>
 		</html>
 	);
