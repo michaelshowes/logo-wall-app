@@ -17,6 +17,9 @@ module.exports = {
 			}
 		},
 		extend: {
+			gridTemplateColumns: {
+				logolist: 'repeat(auto-fit, minmax(200px, 1fr))'
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
