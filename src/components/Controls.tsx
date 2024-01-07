@@ -51,7 +51,9 @@ export default function Controls() {
 					placeholder={'File Name'}
 					onChange={(e) => setFileName(e.target.value)}
 					disabled={canvasImages.length === 0}
-					className={'w-full p-4 mb-2 border-0 rounded focus-visible:outline-0'}
+					className={
+						'w-full py-[8px] px-4 mb-2 border-0 rounded focus-visible:outline-0'
+					}
 				/>
 				<div className={'text-white mb-5'}>Files are saved in PNG format</div>
 				<div className={'flex justify-center gap-x-6 w-full'}>
