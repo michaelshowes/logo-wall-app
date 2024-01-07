@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import CanvasContextProvider from '@/context/canvasContext';
-import '@/globals.scss';
 import { Toaster } from '@/components/ui/sonner';
+
+import '@/globals.scss';
 
 const inter = Inter({ subsets: ['latin'] });
 

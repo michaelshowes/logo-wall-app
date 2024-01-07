@@ -1,10 +1,11 @@
 'use client';
 
+import { FormEvent, useState } from 'react';
+import { toast } from 'sonner';
+
 import { useCanvasContext } from '@/context/canvasContext';
 import { exportAsImage } from '@/utils/exportAsImage';
-import { FormEvent, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { toast } from 'sonner';
 
 export default function Controls() {
 	const { ref, canvasImages, setCanvasImages } = useCanvasContext();

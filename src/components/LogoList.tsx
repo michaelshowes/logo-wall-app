@@ -1,9 +1,10 @@
 'use client';
 
-import Image from 'next/image';
-import { useCanvasContext } from '@/context/canvasContext';
-import { LogoProps } from '@/types';
 import { Fragment } from 'react';
+import Image from 'next/image';
+
+import { useCanvasContext } from '@/context/canvasContext';
+import type { LogoProps } from '@/types';
 
 type LogoListProps = {
 	data: LogoProps[];

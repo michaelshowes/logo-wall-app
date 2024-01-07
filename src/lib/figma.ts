@@ -1,4 +1,5 @@
 import * as Figma from 'figma-js';
+
 import type { LogoProps } from '@/types';
 
 const figmaClient = Figma.Client({
