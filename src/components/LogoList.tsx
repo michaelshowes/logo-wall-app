@@ -1,17 +1,17 @@
 'use client';
 
-import { Fragment, useState } from 'react';
-import Image from 'next/image';
 import { X } from 'lucide-react';
+import Image from 'next/image';
+import { useState } from 'react';
 
-import type { LogoProps } from '@/types';
-import { useCanvasContext } from '@/context/canvasContext';
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger
 } from '@/components/ui/tooltip';
+import { useCanvasContext } from '@/context/canvasContext';
+import type { LogoProps } from '@/types';
 import { Arrow } from '@radix-ui/react-tooltip';
 
 type LogoListProps = {
