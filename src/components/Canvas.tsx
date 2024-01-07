@@ -18,7 +18,7 @@ import {
 	useSortable
 } from '@dnd-kit/sortable';
 
-import { LogoProps } from '@/lib/figma';
+import { LogoProps } from '@/types';
 
 function SortableLogo({ image }: { image: LogoProps }) {
 	const { attributes, listeners, setNodeRef, transform, transition } =
@@ -106,7 +106,6 @@ export default function Canvas() {
 		<section
 			className={'grid grid-cols-4 w-full'}
 			ref={ref}
-			id={'canvas'}
 		>
 			<DndContext
 				collisionDetection={closestCenter}

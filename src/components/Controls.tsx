@@ -31,10 +31,8 @@ export default function Controls() {
 			},
 			error: 'Error'
 		});
-		const canvas = document.getElementById('canvas');
-		canvas!.style.background = '#827e7e';
+
 		exportAsImage(ref.current, `${fileName}.png`);
-		canvas!.style.background = 'none';
 	};
 
 	const clearCanvas = () => {
