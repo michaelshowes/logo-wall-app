@@ -2,7 +2,11 @@
 const nextConfig = {
 	images: {
 		dangerouslyAllowSVG: true,
-		domains: ['figma-alpha-api.s3.us-west-2.amazonaws.com'],
+		remotePatterns: [
+			{
+				hostname: 'figma-alpha-api.s3.us-west-2.amazonaws.com'
+			}
+		],
 		minimumCacheTTL: 60 * 60 * 24
 	}
 };
