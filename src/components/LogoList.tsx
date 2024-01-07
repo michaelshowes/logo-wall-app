@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useCanvasContext } from '@/context/canvasContext';
-import { LogoProps } from '@/lib/figma';
+import { LogoProps } from '@/types';
 import { Fragment } from 'react';
 
 type LogoListProps = {
@@ -32,6 +32,7 @@ export default function LogoList({ data }: LogoListProps) {
 								src={image.url || ''}
 								width={500}
 								height={300}
+								id={image.name}
 								alt={image.name}
 							/>
 						</button>

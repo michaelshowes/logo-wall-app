@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import scss from './header.module.scss';
-import Logo from '@/assets/svg/is_logo.svg';
 
 export default function Header() {
 	return (
