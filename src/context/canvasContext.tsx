@@ -1,6 +1,6 @@
 'use client';
 
-import { LogoProps } from '@/lib/figma';
+import { LogoProps } from '@/types';
 import {
 	Dispatch,
 	SetStateAction,
