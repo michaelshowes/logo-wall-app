@@ -57,6 +57,7 @@ export default function Canvas() {
     <section
       className={'grid w-full grid-cols-4'}
       ref={ref}
+      id={'canvas'}
     >
       <DndContext
         collisionDetection={closestCenter}

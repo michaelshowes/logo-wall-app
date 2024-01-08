@@ -24,6 +24,8 @@ export default function Controls() {
 
   const downloadImage = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+
     toast.promise(promise, {
       loading: 'Downloading your logo wall...',
       success: (data) => {
@@ -32,8 +34,9 @@ export default function Controls() {
       },
       error: 'Error'
     });
-
+    canvas.style.scale = '2';
     exportAsImage(ref.current, `${fileName}.png`);
+    canvas.style.scale = '1';
   };
 
   const clearCanvas = () => {
