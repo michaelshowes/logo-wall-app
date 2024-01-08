@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import { CSS } from '@dnd-kit/utilities';
 import { useSortable } from '@dnd-kit/sortable';
+import { useState } from 'react';
+import { X } from 'lucide-react';
 
 import { Slider } from '@/components/ui/slider';
 import { useCanvasContext } from '@/context/canvasContext';
 import type { LogoProps } from '@/types';
-import { useState } from 'react';
-import { X } from 'lucide-react';
 
 export default function SortableLogo({ image }: { image: LogoProps }) {
   const [scale, setScale] = useState(1);
