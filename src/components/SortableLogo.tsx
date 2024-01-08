@@ -41,13 +41,18 @@ export default function SortableLogo({ image }: { image: LogoProps }) {
         className={
           'max-h-0-[179px] h-[179px] w-[344px] max-w-[344px] overflow-hidden'
         }
+        style={{
+          backgroundColor: `rgba(${image.color.r}, ${image.color.g}, ${image.color.b}, ${image.color.a})`
+        }}
       >
         <Image
           src={image.url || ''}
           fill
           alt={image.name}
           className={'object-cover'}
-          style={{ transform: `scale(${scale})` }}
+          style={{
+            transform: `scale(${scale})`
+          }}
         />
       </div>
       <div
@@ -57,7 +62,7 @@ export default function SortableLogo({ image }: { image: LogoProps }) {
       >
         <Slider
           defaultValue={[1]}
-          min={1}
+          min={0.5}
           max={2}
           step={0.01}
           onValueChange={(value) => setScale(value[0])}
