@@ -55,7 +55,9 @@ export default function Controls() {
 						'w-full py-[8px] px-4 mb-2 border-0 rounded focus-visible:outline-0'
 					}
 				/>
-				<div className={'text-white mb-5'}>Files are saved in PNG format</div>
+				<div className={'text-white mb-5 text-xs'}>
+					Files are saved in PNG format
+				</div>
 				<div className={'flex justify-center gap-x-6 w-full'}>
 					<Button
 						type={'submit'}

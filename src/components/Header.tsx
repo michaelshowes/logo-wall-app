@@ -4,7 +4,7 @@ export default function Header() {
 	return (
 		<header className={'py-16'}>
 			<h1 className={'text-white text-center font-semibold'}>
-				<div className={'text-4xl uppercase mb-3'}>
+				<div className={'text-4xl uppercase'}>
 					<Image
 						src='/is_logo.svg'
 						alt=''
