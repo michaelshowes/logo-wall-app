@@ -15,7 +15,8 @@ import {
 } from '@dnd-kit/sortable';
 
 import { useCanvasContext } from '@/context/canvasContext';
-import SortableLogo from '@/components/SortableLogo';
+import SortableElement from '@/components/SortableElement';
+import Logo from './Logo';
 
 export default function Canvas() {
   const { canvasImages, setCanvasImages, ref } = useCanvasContext();
@@ -69,10 +70,12 @@ export default function Canvas() {
           strategy={rectSwappingStrategy}
         >
           {canvasImages.map((image) => (
-            <SortableLogo
+            <SortableElement
               key={image.id}
-              image={image}
-            />
+              id={image.id}
+            >
+              <Logo image={image} />
+            </SortableElement>
           ))}
         </SortableContext>
       </DndContext>
