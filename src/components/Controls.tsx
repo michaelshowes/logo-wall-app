@@ -6,6 +6,7 @@ import { toast } from 'sonner';
 import { useCanvasContext } from '@/context/canvasContext';
 import { exportAsImage } from '@/utils/exportAsImage';
 import { Button } from '@/components/ui/button';
+import { Input } from './ui/input';
 
 export default function Controls() {
   const { ref, canvasImages, setCanvasImages } = useCanvasContext();
@@ -28,8 +29,7 @@ export default function Controls() {
 
     toast.promise(promise, {
       loading: 'Downloading your logo wall...',
-      success: (data) => {
-        // @ts-expect-error
+      success: (data: any) => {
         return data.message;
       },
       error: 'Error'
@@ -49,16 +49,13 @@ export default function Controls() {
         className={'mx-auto flex max-w-[350px] flex-col items-center'}
         onSubmit={(e) => downloadImage(e)}
       >
-        <input
-          type='text'
+        <Input
+          type={'text'}
           placeholder={'File Name'}
           onChange={(e) => setFileName(e.target.value)}
           disabled={canvasImages.length === 0}
-          className={
-            'mb-2 w-full rounded border-0 px-4 py-[8px] focus-visible:outline-0'
-          }
         />
-        <div className={'mb-5 text-xs text-white'}>
+        <div className={'mb-5 mt-2 text-xs text-white'}>
           Files are saved in PNG format
         </div>
         <div className={'flex w-full justify-center gap-x-6'}>

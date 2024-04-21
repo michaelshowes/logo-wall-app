@@ -13,6 +13,7 @@ import {
 import { useCanvasContext } from '@/context/canvasContext';
 import type { LogoProps } from '@/types';
 import { Arrow } from '@radix-ui/react-tooltip';
+import { Input } from './ui/input';
 
 type LogoListProps = {
   data: LogoProps[];
@@ -29,23 +30,17 @@ export default function LogoList({ data }: LogoListProps) {
 
   return (
     <TooltipProvider>
-      <section>
-        <div className={'mb-3 flex w-full justify-center gap-x-3'}>
-          <label
-            htmlFor={'search'}
-            className={'text-white'}
-          >
-            Search
-          </label>
-          <input
-            name={'search'}
-            type='text'
+      <section className={'flex flex-col items-center'}>
+        <div className={'mb-3 flex w-full max-w-[350px] justify-center relative'}>
+          <Input
+            type={'text'}
+            placeholder={'Search'}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           {searchTerm && (
             <button onClick={() => setSearchTerm('')}>
-              <X className={'text-white'} />
+              <X className={'top-[50%] -translate-y-[50%] absolute right-2'} />
             </button>
           )}
         </div>
