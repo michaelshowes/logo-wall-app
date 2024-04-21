@@ -1,5 +1,13 @@
 import html2canvas from 'html2canvas';
 
+/**
+ * Export the given element as an image
+ * @param el - The element to export
+ * @param imageFileName - The name of the image file
+ * @returns void
+ * @example
+ * exportAsImage(element, 'filename.png');
+ */
 export const exportAsImage = async (
   el: HTMLElement | null,
   imageFileName: string

@@ -6,6 +6,12 @@ const figmaClient = Figma.Client({
   personalAccessToken: process.env.NEXT_PUBLIC_FIGMA_TOKEN
 });
 
+/**
+ * Fetches the Figma document and returns the logos
+ * @returns {Promise<LogoProps[]>} - The logos
+ * @example
+ * const logos = await getFigma();
+ */
 export async function getFigma() {
   const { data } = await figmaClient.file(
     process.env.NEXT_PUBLIC_FIGMA_DOCUMENT as string
