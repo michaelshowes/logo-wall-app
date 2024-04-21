@@ -8,6 +8,12 @@ import { exportAsImage } from '@/utils/exportAsImage';
 import { Button } from '@/components/ui/button';
 import { Input } from './ui/input';
 
+/**
+ * The controls component
+ * @returns The controls component
+ * @example
+ * <Controls />
+ */
 export default function Controls() {
   const { ref, canvasImages, setCanvasImages } = useCanvasContext();
   const [fileName, setFileName] = useState('logo-wall');

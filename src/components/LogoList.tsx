@@ -19,6 +19,13 @@ type LogoListProps = {
   data: LogoProps[];
 };
 
+/**
+ * The logo list component
+ * @param data - The logo data
+ * @returns The logo list component
+ * @example
+ * <LogoList data={data} />
+ */
 export default function LogoList({ data }: LogoListProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const { setCanvasImages } = useCanvasContext();
@@ -31,7 +38,9 @@ export default function LogoList({ data }: LogoListProps) {
   return (
     <TooltipProvider>
       <section className={'flex flex-col items-center'}>
-        <div className={'mb-3 flex w-full max-w-[350px] justify-center relative'}>
+        <div
+          className={'relative mb-3 flex w-full max-w-[350px] justify-center'}
+        >
           <Input
             type={'text'}
             placeholder={'Search'}
@@ -40,7 +49,7 @@ export default function LogoList({ data }: LogoListProps) {
           />
           {searchTerm && (
             <button onClick={() => setSearchTerm('')}>
-              <X className={'top-[50%] -translate-y-[50%] absolute right-2'} />
+              <X className={'absolute right-2 top-[50%] -translate-y-[50%]'} />
             </button>
           )}
         </div>
